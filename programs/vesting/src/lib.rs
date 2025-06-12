@@ -32,4 +32,8 @@ pub mod vesting {
     ) -> Result<()> {
         instructions::create_employee_vesting(ctx, start_time, end_time, total_amount, cliff_time)
     }
+
+    pub fn claim_tokens(ctx: Context<ClaimTokens>, company_name: String) -> Result<()> {
+        instructions::claim_tokens(ctx, company_name)
+    }
 }
